@@ -1,0 +1,205 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    color: #333;
+    font-size: 18px; /* Increase base font size */
+	background: url('header-music-bg.jfif') no-repeat center center/cover;
+}
+
+/* Header Section with Background Image */
+
+/* Style for the header */
+header {
+    background: linear-gradient(to bottom, #fe441d, #fff); /* Background color for the header */
+    padding: 20px; /* Padding around the header */
+    text-align: center; /* Center text inside the header */
+    color: white; /* Text color for the header */
+	position: sticky;
+	top: 0;
+	z-index: 50;
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+	
+	
+}
+
+/* Style for the header background section */
+.header-bg {
+    background-size: cover; /* Ensure the background image covers the entire div */
+    background-position: center; /* Position the background image at the center */
+    padding: 10px 50px; /* Padding inside the .header-bg */
+    border-radius: 10px; /* Rounded corners for the .header-bg */
+	animation: popupEffect 2s ease-out;
+}
+
+
+/* Keyframes for fade-in effect */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Keyframes for slide-in effect */
+@keyframes slideIn {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+
+
+
+/* Style for the heading */
+header h1 {
+    font-size: 2.5em; /* Larger font size for the heading */
+    margin: 0; /* Remove default margin */
+    font-family: 'Apple Chancery', cursive; /* Use font for the heading */
+}
+
+/* Style for the paragraph */
+header p {
+    font-size: 1em; /* Slightly larger font size for the paragraph */
+    margin-top: 10px; /* Space above the paragraph */
+    font-family: 'Market Felt', Fantasy; /* Use font for the paragraph */
+	color: #095e66;
+}
+
+
+
+
+
+/* Section Styling */
+section {
+    padding: 30px; /* More padding for readability */
+    margin: 20px auto;
+    max-width: 30%; /* Adjust width to 30% of the screen */
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background: rgba(255, 255, 255, 0.9);
+    font-size: 12px; /* Increase font size within sections */
+}
+
+/* Table Styling */
+table {
+    width: 80%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+th, td {
+    padding: 15px; /* Larger padding for better spacing */
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+/* Form Styling */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Increase spacing between form elements */
+    width: 80%; /* Make forms cover 80% of the screen */
+    margin: 0 auto; /* Center the form */
+}
+
+input, select, textarea, button {
+    padding: 15px; /* Larger padding for form fields */
+    font-size: 18px; /* Larger font size for better readability */
+}
+
+button {
+    background: #ff4c4c;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 18px; /* Larger font size for the button */
+    transition: background 0.3s;
+}
+
+button:hover {
+    background: #ff3333;
+}
+
+/* Keyframes for result box animation */
+@keyframes showResultBox {
+    0% {
+        opacity: 0;
+        transform: scale(0.8); /* Start small */
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1); /* End at normal size */
+    }
+}
+
+
+
+/* Keyframes for the pop-up animation */
+@keyframes popupEffect {
+    0% {
+        opacity: 0; /* Start invisible */
+        transform: scale(0.8); /* Start smaller than normal */
+    }
+    50% {
+        opacity: 1; /* Fully visible */
+        transform: scale(1.1); /* Grow slightly larger than normal */
+    }
+    100% {
+        transform: scale(1); /* End at normal size */
+    }
+}
+
+/* Add a class for the pop-up effect */
+.popup {
+    animation: popupEffect 0.6s ease-out; /* Apply the pop-up animation */
+}
+
+
+
+/* Result Box Paragraph Styling */
+#result-box p {
+    font-size: 30px;
+    color: #003366;
+    background-color: #e0f7fa;
+    border: 2px solid #00796b;
+    border-radius: 8px;
+    text-align: center;
+    width: 60%;
+    max-width: 400px;
+    margin: 20px auto;
+	animation: popupEffect 0.6s ease-out;
+}
+
+
+
+
+/* Footer Styling */
+footer {
+    text-align: center;
+    padding: 15px;
+    background: #f4f4f4;
+    font-size: 16px;
+}
+
+/* Scroll Effect Animations */
+.scroll-effect {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.scroll-visible {
+    opacity: 1;
+    transform: translateY(0);
+}

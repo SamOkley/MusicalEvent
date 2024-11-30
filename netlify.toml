@@ -1,0 +1,8 @@
+[build]
+  publish = "assets"         # Path to your frontend files (HTML, CSS, JS)
+  functions = "netlify/functions"  # Path to serverless functions
+
+[[redirects]]
+  from = "/.netlify/functions/*"
+  to = "/.netlify/functions/:splat"
+  status = 200

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>S.Okley Event Planner</title>
+    <!-- Link to External CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header Section with Background Image -->
+    <header>
+        <div class="header-bg">
+            <h1>Welcome to Group 7 Music Festival 2024</h1>
+            <p>Experience the biggest music festival of the year!</p>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="scroll-effect">
+        <h2>About the Festival</h2>
+        <p>Join us on 31st December for an unforgettable weekend of 
+			live performances, food trucks, art installations, and an 
+			electric atmosphere. Group 7 Music Fest 2024 brings together 
+			world-class artists in one spectacular event.</p>
+    </section>
+
+    <!-- Ticket Pricing Section -->
+    <section id="pricing" class="scroll-effect">
+        <h2>Ticket Pricing</h2>
+        <table>
+            <tr>
+                <th>Ticket Type</th>
+                <th>Price (AUD)</th>
+            </tr>
+            <tr>
+                <td>General Admission</td>
+                <td>$120</td>
+            </tr>
+            <tr>
+                <td>VIP Pass</td>
+                <td>$250</td>
+            </tr>
+            <tr>
+                <td>Group Package (5 people)</td>
+                <td>$500</td>
+            </tr>
+        </table>
+    </section>
+
+    <!-- Ticket Cost Calculator Section -->
+    <section id="calculator" class="scroll-effect">
+        <h2>Ticket Cost Calculator</h2>
+        <form id="ticket-form">
+            <!-- Ticket Type and Quantity Inputs -->
+            <div class="ticket-group">
+                <label for="general-admission">General Admission ($120):</label>
+                <input type="number" id="general-admission" data-price="120" min="0" value="0">
+            </div>
+            <div class="ticket-group">
+                <label for="vip-pass">VIP Pass ($250):</label>
+                <input type="number" id="vip-pass" data-price="250" min="0" value="0">
+            </div>
+            <div class="ticket-group">
+                <label for="group-package">Group Package (5 people, $500):</label>
+                <input type="number" id="group-package" data-price="500" min="0" value="0">
+            </div>
+        </form>
+					<!-- Result Box -->
+		<div id="result-box">
+			<p id="total-cost">AU$ 0</p>
+		</div>
+	</section>
+	
+
+    <!-- Contact Section -->
+    <section id="contact" class="scroll-effect">
+        <h2>Contact Us</h2>
+        <form id="contact-form" method="POST" action="process_contact.php">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+            <button type="submit">Send</button>
+        </form>
+        <div id="form-response"></div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>© 2024 S.Okley Event Planner. All rights reserved.</p>
+    </footer>
+
+    <!-- Link to External JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
